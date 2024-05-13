@@ -1,189 +1,115 @@
 package com.project.accountbook.board.post.model;
 
-import java.util.Date;
+import lombok.Data;
 
-/*
-tblPost
-tblAttachedFile
-*/
+/**
+ * 게시글과 첨부파일 정보를 담는 DTO 클래스입니다.
+ */
+@Data
 public class PostDTO {
-	
-	//게시글
-	private String seq;
-	private String seqBoard;
-	private String seqUser;
-	private String profileImg;
-	private String title;
-	private String content;
-	private String writeDate;
-	private String editDate;
-	private int viewCount;
-	private int likeCount;
-	private int dislikeCount;
-	private int reportCount;
-	private int secretCheck;
-	private int blindCheck;
-	private String seqCategory;
-	private String id;
-	
-	public String getSeqCategory() {
-		return seqCategory;
-	}
 
-	public void setSeqCategory(String seqCategory) {
-		this.seqCategory = seqCategory;
-	}
+    /**
+     * 게시글의 고유 번호입니다.
+     */
+    private String seq;
 
-	//첨부파일
-	private String seqPost;
-	private String fileName;
-	private String fileLink;
-	
-	private String me_nickName;
-	private String ad_nickName;
-	
-	public String getme_nickName() {
-		return me_nickName;
-	}
+    /**
+     * 게시글이 속한 게시판의 고유 번호입니다.
+     */
+    private String seqBoard;
 
-	public void setme_nickName(String me_nickName) {
-		this.me_nickName = me_nickName;
-	}
+    /**
+     * 게시글 작성자의 고유 번호입니다.
+     */
+    private String seqUser;
 
-	public String getad_nickName() {
-		return ad_nickName;
-	}
+    /**
+     * 게시글 작성자의 프로필 이미지 링크입니다.
+     */
+    private String profileImg;
 
-	public void setad_nickName(String ad_nickName) {
-		this.ad_nickName = ad_nickName;
-	}
+    /**
+     * 게시글의 제목입니다.
+     */
+    private String title;
 
-	
-	
-	public String getSeq() {
-		return seq;
-	}
+    /**
+     * 게시글의 내용입니다.
+     */
+    private String content;
 
-	public void setSeq(String seq) {
-		this.seq = seq;
-	}
+    /**
+     * 게시글의 작성일입니다.
+     */
+    private String writeDate;
 
-	
+    /**
+     * 게시글의 수정일입니다.
+     */
+    private String editDate;
 
-	public String getSeqBoard() {
-		return seqBoard;
-	}
-	public void setSeqBoard(String seqBoard) {
-		this.seqBoard = seqBoard;
-	}
-	public String getSeqUser() {
-		return seqUser;
-	}
-	public void setSeqUser(String seqUser) {
-		this.seqUser = seqUser;
-	}
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	public String getContent() {
-		return content;
-	}
-	public void setContent(String content) {
-		this.content = content;
-	}
-	public String getWriteDate() {
-		return writeDate;
-	}
-	public void setWriteDate(String date) {
-		this.writeDate = date;
-	}
-	public String getEditDate() {
-		return editDate;
-	}
-	public void setEditDate(String editDate) {
-		this.editDate = editDate;
-	}
-	public int getViewCount() {
-		return viewCount;
-	}
-	public void setViewCount(int viewCount) {
-		this.viewCount = viewCount;
-	}
-	public int getLikeCount() {
-		return likeCount;
-	}
-	public void setLikeCount(int likeCount) {
-		this.likeCount = likeCount;
-	}
-	public int getDislikeCount() {
-		return dislikeCount;
-	}
-	public void setDislikeCount(int dislikeCount) {
-		this.dislikeCount = dislikeCount;
-	}
-	public int getReportCount() {
-		return reportCount;
-	}
-	public void setReportCount(int reportCount) {
-		this.reportCount = reportCount;
-	}
-	public int getSecretCheck() {
-		return secretCheck;
-	}
-	public void setSecretCheck(int secretCheck) {
-		this.secretCheck = secretCheck;
-	}
-	public int getBlindCheck() {
-		return blindCheck;
-	}
-	public void setBlindCheck(int blindCheck) {
-		this.blindCheck = blindCheck;
-	}
-	public String getSeqPost() {
-		return seqPost;
-	}
-	public void setSeqPost(String seqPost) {
-		this.seqPost = seqPost;
-	}
-	public String getFileName() {
-		return fileName;
-	}
-	public void setFileName(String fileName) {
-		this.fileName = fileName;
-	}
-	public String getFileLink() {
-		return fileLink;
-	}
-	public void setFileLink(String fileLink) {
-		this.fileLink = fileLink;
-	}
-	
-	@Override
-	public String toString() {
-		return "PostDTO [seqBoard=" + seqBoard + ", seqUser=" + seqUser + ", title=" + title + ", content=" + content
-				+ ", writeDate=" + writeDate + ", editDate=" + editDate + ", viewCount=" + viewCount + ", likeCount="
-				+ likeCount + ", dislikeCount=" + dislikeCount + ", reportCount=" + reportCount + ", secretCheck="
-				+ secretCheck + ", blindCheck=" + blindCheck + ", seqPost=" + seqPost + ", fileName=" + fileName
-				+ ", fileLink=" + fileLink + "]";
-	}
+    /**
+     * 게시글의 조회수입니다.
+     */
+    private int viewCount;
 
-	public String getProfileImg() {
-		return profileImg;
-	}
+    /**
+     * 게시글의 좋아요 수입니다.
+     */
+    private int likeCount;
 
-	public void setProfileImg(String profileImg) {
-		this.profileImg = profileImg;
-	}
+    /**
+     * 게시글의 싫어요 수입니다.
+     */
+    private int dislikeCount;
 
-	public String getId() {
-		return id;
-	}
+    /**
+     * 게시글의 신고 횟수입니다.
+     */
+    private int reportCount;
 
-	public void setId(String id) {
-		this.id = id;
-	}
-	
+    /**
+     * 게시글의 비밀글 여부입니다. (0: 공개, 1: 비밀글)
+     */
+    private int secretCheck;
+
+    /**
+     * 게시글의 블라인드 처리 여부입니다. (0: 정상, 1: 블라인드)
+     */
+    private int blindCheck;
+
+    /**
+     * 게시글의 카테고리 번호입니다.
+     */
+    private String seqCategory;
+
+    /**
+     * 게시글 작성자의 아이디입니다.
+     */
+    private String id;
+
+    /**
+     * 첨부파일이 속한 게시글의 고유 번호입니다.
+     */
+    private String seqPost;
+
+    /**
+     * 첨부파일의 이름입니다.
+     */
+    private String fileName;
+
+    /**
+     * 첨부파일의 링크입니다.
+     */
+    private String fileLink;
+
+    /**
+     * 회원의 닉네임입니다.
+     */
+    private String me_nickName;
+
+    /**
+     * 관리자의 닉네임입니다.
+     */
+    private String ad_nickName;
 }

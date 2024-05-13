@@ -41,7 +41,7 @@ public class AccountDAO {
 	public AccountDAO() {
 		this.conn = DBUtil.open("125.241.245.222", "webproject", "java1234");
 	}
-	
+
 	//가계부 분석 읽기
 	/**
 	 * 

@@ -1,93 +1,55 @@
 package com.project.accountbook.board.post.model;
 
-public class FreeDTO {
-	
-	private int seq;
-	private String nickname;
-	private String title;
-	private String date;
-	private int viewCount;
-	private int likeCount;
-	private String reportCount;
-	private String secretCheck;
-	private String blindCheck;
-	
-	// 자유 게시판
-	public FreeDTO(int seq, String nickname, String title, String date, int viewCount, int likeCount,
-			String reportCount, String secretCheck, String blindCheck) {
-		super();
-		this.seq = seq;
-		this.nickname = nickname;
-		this.title = title;
-		this.date = date;
-		this.viewCount = viewCount;
-		this.likeCount = likeCount;
-		this.reportCount = reportCount;
-		this.secretCheck = secretCheck;
-		this.blindCheck = blindCheck;
-	}
-	public FreeDTO() {
-		// TODO Auto-generated constructor stub
-	}
-	public int getSeq() {
-		return seq;
-	}
-	public void setSeq(int seq) {
-		this.seq = seq;
-	}
-	public String getNickname() {
-		return nickname;
-	}
-	public void setNickname(String nickname) {
-		this.nickname = nickname;
-	}
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	public String getDate() {
-		return date;
-	}
-	public void setDate(String date) {
-		this.date = date;
-	}
-	public int getViewCount() {
-		return viewCount;
-	}
-	public void setViewCount(int viewCount) {
-		this.viewCount = viewCount;
-	}
-	public int getLikeCount() {
-		return likeCount;
-	}
-	public void setLikeCount(int likeCount) {
-		this.likeCount = likeCount;
-	}
-	public String getReportCount() {
-		return reportCount;
-	}
-	public void setReportCount(String reportCount) {
-		this.reportCount = reportCount;
-	}
-	public String getSecretCheck() {
-		return secretCheck;
-	}
-	public void setSecretCheck(String secretCheck) {
-		this.secretCheck = secretCheck;
-	}
-	public String getBlindCheck() {
-		return blindCheck;
-	}
-	public void setBlindCheck(String blindCheck) {
-		this.blindCheck = blindCheck;
-	}
-	@Override
-	public String toString() {
-		return "FreeDTO [seq=" + seq + ", nickname=" + nickname + ", title=" + title + ", date=" + date + ", viewCount="
-				+ viewCount + ", likeCount=" + likeCount + ", reportCount=" + reportCount + ", secretCheck="
-				+ secretCheck + ", blindCheck=" + blindCheck + "]";
-	}
+import lombok.Data;
 
+/**
+ * 자유 게시판의 게시물 정보를 담는 DTO 클래스입니다.
+ */
+@Data
+public class FreeDTO {
+
+    /**
+     * 게시물의 고유 번호입니다.
+     */
+    private int seq;
+
+    /**
+     * 게시물 작성자의 닉네임입니다.
+     */
+    private String nickname;
+
+    /**
+     * 게시물의 제목입니다.
+     */
+    private String title;
+
+    /**
+     * 게시물의 작성 날짜입니다.
+     */
+    private String date;
+
+    /**
+     * 게시물의 조회수입니다.
+     */
+    private int viewCount;
+
+    /**
+     * 게시물의 좋아요 수입니다.
+     */
+    private int likeCount;
+
+    /**
+     * 게시물의 신고 횟수입니다.
+     */
+    private String reportCount;
+
+    /**
+     * 게시물의 비밀글 여부입니다.
+     */
+    private String secretCheck;
+
+    /**
+     * 게시물의 블라인드 처리 여부입니다.
+     */
+    private String blindCheck;
 }

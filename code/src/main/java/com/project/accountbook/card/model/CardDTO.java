@@ -1,208 +1,105 @@
 package com.project.accountbook.card.model;
 
+import lombok.Data;
+
+/**
+ * 카드 정보와 관련된 데이터를 담는 DTO 클래스입니다.
+ */
+@Data
 public class CardDTO {
 
-	//카드 정보
-	private String ciName;
-	private String explanation;
-	private int annualFee;
-	private String overseasUse;
-	private String cardCompany;
-	private String fileLink;
-	private int seqCardType;
-	
-	//카드 혜택 목록
-	private int lcbseqCardCategory;
-	private int seqCardInformation;
+    /**
+     * 카드 이름입니다.
+     */
+    private String ciName;
 
-	
+    /**
+     * 카드 설명입니다.
+     */
+    private String explanation;
 
-	public int getSeqCardInformation() {
-		return seqCardInformation;
-	}
+    /**
+     * 연회비입니다.
+     */
+    private int annualFee;
 
-	public void setSeqCardInformation(int seqCardInformation) {
-		this.seqCardInformation = seqCardInformation;
-	}
+    /**
+     * 해외 사용 가능 여부입니다.
+     */
+    private String overseasUse;
 
-	//카드 혜택 카테고리
-	private String ccName;
-	
-	//카드/가계부 카테고리 연결
-	private int caaSeqCardCategory;
-	private int seqAccCategory;
-	
-	//카드 할인율
-	private int discountRate;
-	private int seq;
-	private String name;
-	
-	//카드정보
-	private String cardNumber;
-	private String alias;
-	private String enddate;
-	
+    /**
+     * 카드사입니다.
+     */
+    private String cardCompany;
 
-	
-	
-    public String getAlias() {
-		return alias;
-	}
+    /**
+     * 파일 링크입니다.
+     */
+    private String fileLink;
 
-	public void setAlias(String alias) {
-		this.alias = alias;
-	}
+    /**
+     * 카드 타입 일련번호입니다.
+     */
+    private int seqCardType;
 
-	public String getEnddate() {
-		return enddate;
-	}
+    /**
+     * 카드 혜택 카테고리 일련번호입니다.
+     */
+    private int lcbseqCardCategory;
 
-	public void setEnddate(String enddate) {
-		this.enddate = enddate;
-	}
+    /**
+     * 카드 정보 일련번호입니다.
+     */
+    private int seqCardInformation;
 
-	public String getCardNumber() {
-		return cardNumber;
-	}
+    /**
+     * 카드 혜택 카테고리 이름입니다.
+     */
+    private String ccName;
 
-	public void setCardNumber(String cardNumber) {
-		this.cardNumber = cardNumber;
-	}
+    /**
+     * 카드/가계부 카테고리 연결 - 카드 카테고리 일련번호입니다.
+     */
+    private int caaSeqCardCategory;
 
-	private String category;
+    /**
+     * 카드/가계부 카테고리 연결 - 가계부 카테고리 일련번호입니다.
+     */
+    private int seqAccCategory;
 
-    public String getCategory() {
-        return category;
-    }
+    /**
+     * 할인율입니다.
+     */
+    private int discountRate;
 
-    public void setCategory(String category) {
-        this.category = category;
-    }
-    
-	public int getSeq() {
-	    return seq;
-	}
+    /**
+     * 일련번호입니다.
+     */
+    private int seq;
 
-	public void setSeq(int seq) {
-	    this.seq = seq;
-	}
+    /**
+     * 이름입니다.
+     */
+    private String name;
 
-	public String getName() {
-	    return name;
-	}
+    /**
+     * 카드 번호입니다.
+     */
+    private String cardNumber;
 
-	public void setName(String name) {
-	    this.name = name;
-	}
-	public int getDiscountRate() {
-	    return discountRate;
-	}
+    /**
+     * 카드 별칭입니다.
+     */
+    private String alias;
 
-	public void setDiscountRate(int discountRate) {
-	    this.discountRate = discountRate;
-	}
-	
-	
-	public String getCiName() {
-		return ciName;
-	}
-	
-	public void setCiName(String ciName) {
-		this.ciName = ciName;
-	}
-	
-	public String getExplanation() {
-		return explanation;
-	}
-	
-	public void setExplanation(String explanation) {
-		this.explanation = explanation;
-	}
-	
-	public int getAnnualFee() {
-		return annualFee;
-	}
-	
-	public void setAnnualFee(int annualFee) {
-		this.annualFee = annualFee;
-	}
-	
-	public String getOverseasUse() {
-		return overseasUse;
-	}
-	
-	public void setOverseasUse(String overseasUse) {
-		this.overseasUse = overseasUse;
-	}
-	
-	public String getCardCompany() {
-		return cardCompany;
-	}
-	
-	public void setCardCompany(String cardCompany) {
-		this.cardCompany = cardCompany;
-	}
-	
-	public String getFileLink() {
-		return fileLink;
-	}
-	
-	public void setFileLink(String fileLink) {
-		this.fileLink = fileLink;
-	}
-	
-	public int getSeqCardType() {
-		return seqCardType;
-	}
-	
-	public void setSeqCardType(int seqCardType) {
-		this.seqCardType = seqCardType;
-	}
-	
-	public int getLcbseqCardCategory() {
-		return lcbseqCardCategory;
-	}
-	
-	public void setLcbseqCardCategory(int lcbseqCardCategory) {
-		this.lcbseqCardCategory = lcbseqCardCategory;
-	}
-	
-	
-	public String getCcName() {
-		return ccName;
-	}
-	
-	public void setCcName(String ccName) {
-		this.ccName = ccName;
-	}
-	
-	public int getCaaSeqCardCategory() {
-		return caaSeqCardCategory;
-	}
-	
-	public void setCaaSeqCardCategory(int caaSeqCardCategory) {
-		this.caaSeqCardCategory = caaSeqCardCategory;
-	}
-	
-	public int getSeqAccCategory() {
-		return seqAccCategory;
-	}
-	
-	public void setSeqAccCategory(int seqAccCategory) {
-		this.seqAccCategory = seqAccCategory;
-	}
+    /**
+     * 카드 만료일입니다.
+     */
+    private String enddate;
 
-	@Override
-	public String toString() {
-		return "CardDTO [ciName=" + ciName + ", explanation=" + explanation + ", annualFee=" + annualFee
-				+ ", overseasUse=" + overseasUse + ", cardCompany=" + cardCompany + ", fileLink=" + fileLink
-				+ ", seqCardType=" + seqCardType + ", lcbseqCardCategory=" + lcbseqCardCategory
-				+ ", seqCardInformation=" + seqCardInformation + ", ccName=" + ccName + ", caaSeqCardCategory="
-				+ caaSeqCardCategory + ", seqAccCategory=" + seqAccCategory + ", discountRate=" + discountRate
-				+ ", seq=" + seq + ", name=" + name + ", category=" + category + "]";
-	}
-
-	
-	
-	
+    /**
+     * 카드 카테고리입니다.
+     */
+    private String category;
 }
