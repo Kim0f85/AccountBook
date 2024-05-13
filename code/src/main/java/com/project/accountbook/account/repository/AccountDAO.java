@@ -42,86 +42,13 @@ public class AccountDAO {
 		this.conn = DBUtil.open("125.241.245.222", "webproject", "java1234");
 	}
 	
-	//가계부 작성 > 프론트에서 카드 선택해서 작성하는 거면 카드 seq넘겨 받아서 `tblReasonChangeCategory`에서 seq 찾아야할 듯(map?)
-	public int add(AccountInfoDTO dto) {
-		
-		try {
-			
-			String sql = "insert into ";
-
-			pstat = conn.prepareStatement(sql);
-//			pstat.setString(1, dto.get);
-
-
-			return pstat.executeUpdate();
-			
-		} catch (Exception e) {
-			System.out.println("AccountDAO.add");
-			e.printStackTrace();
-		}
-		
-		return 0;
-	}
-	
-	//가계부 작성할 때 카테고리 자동 매칭(AccountInfoDTO에 키워드랑 카테고리 테이블에 대한 대용 추가할지? 따로 뺄지)
-	public int addCategory(AccountInfoDTO dto) {
-		
-		return 0;
-	}
-	
-	
-	//가계부 읽기(map으로 상황 선택해야할 듯)
-	public int get(AccountInfoDTO dto) {
-		
-		return 0;
-	}
-		
-	//가계부 페이지 > 이번달 지출, 수입 계산
-	public int getExpenditureIncome(AccountInfoDTO dto) {
-		
-		return 0;
-	}
-	 
-	
-	//가계부 목록 읽기
-	public int list(AccountInfoDTO dto) {
-		
-		return 0;
-	}
-	
-	//가계부 수정
-	public int update(AccountInfoDTO dto) {
-		
-		return 0;
-	}
-	
-	//가계부 삭제
-	public int del(AccountInfoDTO dto) {
-		
-		return 0;
-	}
-	
-	
-	//구매 위시 목록 작성
-	public int addProduct(AccountInfoDTO dto) {
-		
-		return 0;
-	}
-	
-	//구매 위시 목록 수정
-	public int updateProduct(AccountInfoDTO dto) {
-		
-		return 0;
-	}
-	
-	//구매 위시 목록 삭제
-	public int delProduct(AccountInfoDTO dto) {
-		
-		return 0;
-	}
-	
-	
 	//가계부 분석 읽기
+	/**
+	 * 
+	 * @param id 사용자 ID
+	 * @param map 기간 데이터
+	 * @return 해당 ID의 사용자의 기간별 현제 가계부 항목입니다.
+	 */
 	public ArrayList<AccountInfoDTO> nowAnalysis(String id, HashMap<String, String> map) {
 		
 		try {
@@ -182,6 +109,12 @@ public class AccountDAO {
 		return null;
 	}
 	
+	/**
+	 * 
+	 * @param id 사용자 ID
+	 * @param map 기간 데이터
+	 * @return 해당 ID의 사용자의 기간별 과거 가계부 항목입니다.
+	 */
 	public ArrayList<AccountInfoDTO> beforeAnalysis(String id, HashMap<String, String> map) {
 		
 		try {
@@ -243,6 +176,11 @@ public class AccountDAO {
 		return null;
 	}		
 	
+	/**
+	 * 
+	 * @param id 사용자 ID
+	 * @return 사용자의 고정 지출 항목입니다.
+	 */
 	// 가계부 분석 > 이번달 고정 지출 찾기
 	public ArrayList<AccountInfoDTO> getFixedFluctuation(String id) {
 
@@ -289,6 +227,11 @@ public class AccountDAO {
 		return null;
 	}
 	
+	/**
+	 * 
+	 * @param id 사용자 ID
+	 * @return 사용자의 챌린지 정보입니다. 
+	 */
 	//가계부 분석 > 챌린지 정보 불러오기
 	public UserDTO getSavingsGoals(String id) {
 
@@ -335,6 +278,11 @@ public class AccountDAO {
 		return null;
 	}
 	
+	/**
+	 * 
+	 * @param id 사용자 ID
+	 * @return 사용자의 이번달 사용 금약 입니다.
+	 */
 	//가계부 분석 > 이번달 사용 금액 불러오기
 	public int getMonthUsage (String id) {
 
@@ -371,6 +319,11 @@ public class AccountDAO {
 		return 0;
 	}
 	
+	/**
+	 * 
+	 * @param id
+	 * @return
+	 */
 	//가계부 분석 > 이번달 입금 불러오기
 	public int getMonthSaving (String id) {
 		
